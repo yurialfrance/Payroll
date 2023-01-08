@@ -3,10 +3,8 @@ Created by: PLM BSIT 1-1
               
 GROUP 3                    
 
-Leader: 
-Yuri Alfrance Egipto
-
 Members:
+Yuri Alfrance Egipto
 Kristhia Lastra      
 Rizza Mae Pardales    
 Alessandra San Jose  
