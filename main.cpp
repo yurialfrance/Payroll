@@ -1,3 +1,4 @@
+//FINAL PROJECT (PAYROLL)
 #include <iostream>  //cout and cin
 #include <string> //for string
 #include <windows.h> //for colors
@@ -42,8 +43,6 @@ int main ()
                           \ \  \____        \ \  \\\  \       \ \  \|\  \       \ \  \       \ \  \\ \  \
                            \ \_______\       \ \_______\       \ \_______\       \ \__\       \ \__\\ \__\
                             \|_______|        \|_______|        \|_______|        \|__|        \|__| \|__|
-
-
              )"<<'\n';
 
 //////////////////End of Estetik Login Print///////////////////////////////////////
@@ -112,15 +111,12 @@ int main ()
     {
             system("COLOR 0c"); //dark green
             cout<<R"(
-
                         _____                       _   _
                        |_   _|_ _ _ __ ___   __ _  | \ | | __ _
                          | |/ _` | '_ ` _ \ / _` | |  \| |/ _` |
                          | | (_| | | | | | | (_| | | |\  | (_| |
                          |_|\__,_|_| |_| |_|\__,_| |_| \_|\__,_|
                               Too Many Login Attempts
-
-
              )"<<'\n';
 
             return 0; //termination of program
@@ -1013,28 +1009,28 @@ int main ()
                 int month, day;
             int year = 2023; // Use the current year as the default year
 
-              // Create maps to store the special holidays and special non-working days
-              map<pair<int, int>, string> holidays;
-              holidays[make_pair(1, 1)] = "NEW YEAR";
-              holidays[make_pair(6, 12)] = "INDEPENDENCE DAY ";
-              holidays[make_pair(12, 25)] = "CHRISTMAS DAY";
-              holidays[make_pair(4, 6)] = "MAUNDY THURSDAY";
-              holidays[make_pair(4, 7)] = "GOOD FRIDAY";
-              holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
-              holidays[make_pair(5, 1)] = "LABOR DAY";
-              holidays[make_pair(8, 28)] = "NATIONAL HEROES’ DAY";
-              holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
-              holidays[make_pair(12, 30)] = "RIZAL DAY";
+            // Create maps to store the regular holidays and special non-working days
+              map<pair<int, int>, string> regular_holidays;
+              regular_holidays[make_pair(1, 1)] = "NEW YEAR";
+              regular_holidays[make_pair(6, 12)] = "INDEPENDENCE DAY ";
+              regular_holidays[make_pair(12, 25)] = "CHRISTMAS DAY";
+              regular_holidays[make_pair(4, 6)] = "MAUNDY THURSDAY";
+              regular_holidays[make_pair(4, 7)] = "GOOD FRIDAY";
+              regular_holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
+              regular_holidays[make_pair(5, 1)] = "LABOR DAY";
+              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROESâ€™ DAY";
+              regular_holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
+              regular_holidays[make_pair(12, 30)] = "RIZAL DAY";
 
-              map<pair<int, int>, string> non_working_days;
-              non_working_days[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEAR’S DAY)";
-              non_working_days[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
-              non_working_days[make_pair(4, 8)] = "BLACK SATURDAY";
-              non_working_days[make_pair(8, 21)] = "NINOY AQUINO DAY";
-              non_working_days[make_pair(11, 1)] = "ALL SAINTS' DAY";
-              non_working_days[make_pair(11, 2)] = "ALL SOULS' DAY";
-              non_working_days[make_pair(12, 8)] = "FEAST OF THE IMMACULATE CONCEPTION OF MARY";
-              non_working_days[make_pair(12, 31)] = "LAST DAY OF THE YEAR (NEW YEAR'S EVE)";
+              map<pair<int, int>, string> non_working_holidays;
+              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEARâ€™S DAY)";
+              non_working_holidays[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
+              non_working_holidays[make_pair(4, 8)] = "BLACK SATURDAY";
+              non_working_holidays[make_pair(8, 21)] = "NINOY AQUINO DAY";
+              non_working_holidays[make_pair(11, 1)] = "ALL SAINTS' DAY";
+              non_working_holidays[make_pair(11, 2)] = "ALL SOULS' DAY";
+              non_working_holidays[make_pair(12, 8)] = "FEAST OF THE IMMACULATE CONCEPTION OF MARY";
+              non_working_holidays[make_pair(12, 31)] = "LAST DAY OF THE YEAR (NEW YEAR'S EVE)";
 
               SetConsoleTextAttribute(hdz,14);
               cout << "\t\t\t\t\tEnter a date (mm/dd): ";
@@ -1042,7 +1038,7 @@ int main ()
               cin >> month >> day;
 
               // Calculate yung day of the week gamit Zeller's congruence
-              int h = (day + (13*(month+1))/5 + year + (year/4) - (year/100) + (year/400)) % 7;
+              int h = (day + (13*(month+1))/5 + year + (year/4) - (year/100) + (year/400)) % 7 +1;
 
               // Convert yung value ng day sa words
               string day_of_week;
@@ -1073,8 +1069,8 @@ int main ()
               // Check if yung date ay special holiday or special non-working day
               pair<int, int> date = make_pair(month, day);
 
-              if (holidays.count(date) > 0 && day_of_week != "Sunday") {
-                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << holidays[date] << endl;
+              if (regular_holidays.count(date) > 0 && day_of_week != "Sunday") {
+                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << regular_holidays[date] << endl;
                 cout << "\n\t\t\t\t\tEnter no. of hours reported: ";
                              cin >> holehrs;
                                 if (holehrs <= 8  )
@@ -1100,8 +1096,8 @@ int main ()
                                    cout << "\t\t\t\t\tInvalid";
                                 }
 
-              } else if (non_working_days.count(date) > 0 && day_of_week != "Sunday") {
-                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << non_working_days[date] << endl;
+              } else if (non_working_holidays.count(date) > 0 && day_of_week != "Sunday") {
+                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << non_working_holidays[date] << endl;
                 SetConsoleTextAttribute(hdz,14);
                 cout << "\n\t\t\t\t\tEnter no. of hours reported: ";
                 SetConsoleTextAttribute(hdz,15);
@@ -1128,7 +1124,6 @@ int main ()
                                 {
                                    cout << "\t\t\t\t\tInvalid";
                                 }
-
 
               } else {
                 cout << "\t\t\t\t\tThe day of the week is: " << day_of_week << endl;
@@ -1891,29 +1886,28 @@ int main ()
                 int month, day;
             int year = 2023; // Use the current year as the default year
 
-              // Create maps to store the special holidays and special non-working days
-              map<pair<int, int>, string> holidays;
-              holidays[make_pair(1, 1)] = "NEW YEAR'S EVE";
-              holidays[make_pair(6, 12)] = "INDEPENDENCE DAY ";
-              holidays[make_pair(12, 25)] = "CHRISTMAS DAY";
-              holidays[make_pair(4, 6)] = "MAUNDY THURSDAY";
-              holidays[make_pair(4, 7)] = "GOOD FRIDAY";
-              holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
-              holidays[make_pair(5, 1)] = "LABOR DAY";
-              holidays[make_pair(8, 28)] = "NATIONAL HEROES’ DAY";
-              holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
-              holidays[make_pair(12, 30)] = "RIZAL DAY";
+            // Create maps to store the regular holidays and special non-working days
+              map<pair<int, int>, string> regular_holidays;
+              regular_holidays[make_pair(1, 1)] = "NEW YEAR";
+              regular_holidays[make_pair(6, 12)] = "INDEPENDENCE DAY ";
+              regular_holidays[make_pair(12, 25)] = "CHRISTMAS DAY";
+              regular_holidays[make_pair(4, 6)] = "MAUNDY THURSDAY";
+              regular_holidays[make_pair(4, 7)] = "GOOD FRIDAY";
+              regular_holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
+              regular_holidays[make_pair(5, 1)] = "LABOR DAY";
+              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROESâ€™ DAY";
+              regular_holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
+              regular_holidays[make_pair(12, 30)] = "RIZAL DAY";
 
-              map<pair<int, int>, string> non_working_days;
-              non_working_days[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEAR’S DAY)";
-              non_working_days[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
-              non_working_days[make_pair(4, 8)] = "BLACK SATURDAY";
-              non_working_days[make_pair(8, 21)] = "NINOY AQUINO DAY";
-              non_working_days[make_pair(11, 1)] = "ALL SAINTS' DAY";
-              non_working_days[make_pair(11, 2)] = "ALL SOULS' DAY";
-              non_working_days[make_pair(12, 8)] = "FEAST OF THE IMMACULATE CONCEPTION OF MARY";
-              non_working_days[make_pair(12, 31)] = "LAST DAY OF THE YEAR";
-
+              map<pair<int, int>, string> non_working_holidays;
+              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEARâ€™S DAY)";
+              non_working_holidays[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
+              non_working_holidays[make_pair(4, 8)] = "BLACK SATURDAY";
+              non_working_holidays[make_pair(8, 21)] = "NINOY AQUINO DAY";
+              non_working_holidays[make_pair(11, 1)] = "ALL SAINTS' DAY";
+              non_working_holidays[make_pair(11, 2)] = "ALL SOULS' DAY";
+              non_working_holidays[make_pair(12, 8)] = "FEAST OF THE IMMACULATE CONCEPTION OF MARY";
+              non_working_holidays[make_pair(12, 31)] = "LAST DAY OF THE YEAR (NEW YEAR'S EVE)";
 
               SetConsoleTextAttribute(hdz,14);
               cout << "\t\t\t\t\tEnter a date (mm/dd): ";
@@ -1952,11 +1946,9 @@ int main ()
               // Check if yung date ay special holiday or special non-working day
               pair<int, int> date = make_pair(month, day);
 
-              if (holidays.count(date) > 0 && day_of_week != "Sunday") {
-                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << holidays[date] << endl;
-                SetConsoleTextAttribute(hdz,14);
+              if (regular_holidays.count(date) > 0 && day_of_week != "Sunday") {
+                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << regular_holidays[date] << endl;
                 cout << "\n\t\t\t\t\tEnter no. of hours reported: ";
-                SetConsoleTextAttribute(hdz,15);
                              cin >> holehrs;
                                 if (holehrs <= 8  )
                                 {
@@ -1981,10 +1973,10 @@ int main ()
                                    cout << "\t\t\t\t\tInvalid";
                                 }
 
-              } else if (non_working_days.count(date) > 0 && day_of_week != "Sunday") {
-                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << non_working_days[date] << endl;
-                cout << "\n\t\t\t\t\tEnter no. of hours reported: ";
+              } else if (non_working_holidays.count(date) > 0 && day_of_week != "Sunday") {
+                cout << "\t\t\t\t\tDAY: " << day_of_week << " // HOLIDAY: "  << non_working_holidays[date] << endl;
                 SetConsoleTextAttribute(hdz,14);
+                cout << "\n\t\t\t\t\tEnter no. of hours reported: ";
                 SetConsoleTextAttribute(hdz,15);
                              cin >> holehrs;
                                 if (holehrs <= 8  )
@@ -2009,6 +2001,8 @@ int main ()
                                 {
                                    cout << "\t\t\t\t\tInvalid";
                                 }
+
+
 
 
               } else {
@@ -2623,17 +2617,13 @@ int main ()
 
     SetConsoleTextAttribute(hdz,14);
     cout<<R"(
-
                                                      ___ _____ _
                                                     |_ _|_   _| | ___   __ _
                                                      | |  | | | |/ _ \ / _` |
                                                      | |  | | | | (_) | (_| |
                                                     |___| |_| |_|\___/ \__, |
                                                                        |___/
-
                                                         No.1 IT company
-
-
              )"<<'\n';
    SetConsoleTextAttribute(hdz,15);
     // current date and time on the current system
@@ -2686,8 +2676,6 @@ cout<<"\n\n";
     SetConsoleTextAttribute(hdz,14);
     system("cls"); // for clearing page
     cout<<R"(
-
-
                          __  __                           _               ____        _                       _
                         |  \/  | __ _ _ __ __ _ _ __ ___ (_)_ __   __ _  / ___|  __ _| | __ _ _ __ ___   __ _| |_
                         | |\/| |/ _` | '__/ _` | '_ ` _ \| | '_ \ / _` | \___ \ / _` | |/ _` | '_ ` _ \ / _` | __|
@@ -2700,9 +2688,7 @@ cout<<"\n\n";
                         |  _| (_) | |    | |_| \__ \ | | | | (_| | | (_) | |_| | |    \__ \ |_| \__ \ ||  __/ | | | | |_|
                         |_|  \___/|_|     \__,_|___/_|_| |_|\__, |  \___/ \__,_|_|    |___/\__, |___/\__\___|_| |_| |_(_)
                                                             |___/                          |___/
-
                                             Mabuhay ang lahat ng manggagawang Pilipino!!!
-
              )"<<'\n';
 
              SetConsoleTextAttribute(hdz,15);
@@ -2731,12 +2717,3 @@ cout<<"\n\n";
 | Pocholo Balanac       Sharmaine Alaurin    |
  --------------------------------------------
 */
-
-
-
-
-
-
-
-
-
