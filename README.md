@@ -6,9 +6,7 @@ GROUP 3
 Members:
 
 Yuri Alfrance Egipto
-
 Kristhia Lastra      
-
 Rizza Mae Pardales    
 Alessandra San Jose  
 Ricky Cabe            
