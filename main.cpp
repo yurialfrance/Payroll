@@ -1015,12 +1015,12 @@ int main ()
               regular_holidays[make_pair(4, 7)] = "GOOD FRIDAY";
               regular_holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
               regular_holidays[make_pair(5, 1)] = "LABOR DAY";
-              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROES’ DAY";
+              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROESâ€™ DAY";
               regular_holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
               regular_holidays[make_pair(12, 30)] = "RIZAL DAY";
 
               map<pair<int, int>, string> non_working_holidays;
-              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEAR’S DAY)";
+              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEARâ€™S DAY)";
               non_working_holidays[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
               non_working_holidays[make_pair(4, 8)] = "BLACK SATURDAY";
               non_working_holidays[make_pair(8, 21)] = "NINOY AQUINO DAY";
@@ -1595,7 +1595,6 @@ int main ()
 
 
                 //TAX
-                double taxwith;
 
                 taxinc = (grosspay-sss)-(phealth)-(pagibig);
                 cout << "\n\n\t\t\t\t\tTAXABLE INCOME: " << taxinc;
@@ -1892,12 +1891,12 @@ int main ()
               regular_holidays[make_pair(4, 7)] = "GOOD FRIDAY";
               regular_holidays[make_pair(4, 10)] = "MONDAY NEAREST ARAW NG KAGITINGAN";
               regular_holidays[make_pair(5, 1)] = "LABOR DAY";
-              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROES’ DAY";
+              regular_holidays[make_pair(8, 28)] = "NATIONAL HEROESâ€™ DAY";
               regular_holidays[make_pair(11, 27)] = "MONDAY NEAREST BONIFACIO DAY";
               regular_holidays[make_pair(12, 30)] = "RIZAL DAY";
 
               map<pair<int, int>, string> non_working_holidays;
-              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEAR’S DAY)";
+              non_working_holidays[make_pair(1, 2)] = "ADDITIONAL SPECIAL NON-WORKING DAY (MONDAY NEAREST NEW YEARâ€™S DAY)";
               non_working_holidays[make_pair(2, 25)] = "EDSA PEOPLE POWER REVOLUTION ANNIVERSARY";
               non_working_holidays[make_pair(4, 8)] = "BLACK SATURDAY";
               non_working_holidays[make_pair(8, 21)] = "NINOY AQUINO DAY";
@@ -2419,8 +2418,6 @@ int main ()
 
 
                 //TAX
-                double taxwith;
-
                 taxinc = (grosspay-sss)-(phealth)-(pagibig);
                 cout << "\n\n\t\t\t\t\tTAXABLE INCOME: " << taxinc;
 
