@@ -1,4 +1,4 @@
-//FINAL PROJECT (PAYROLL)
+//Final Code for Payroll System huhu
 #include <iostream>  //cout and cin
 #include <string> //for string
 #include <windows.h> //for colors
@@ -151,8 +151,6 @@ int main ()
     double regular, basichrs, basicpay, daily, hourly, daysreported;
     double grosspay;
     double absentdays, absenthours, absentamount;
-    int rest, resthrs;
-    double restpay;
     double lateuthours, lateutamount;
     double overtime, otamount;
     int holyn, loan_op;
@@ -349,7 +347,7 @@ int main ()
 
 
 	   //GROSSPAY
-	   grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+restpay+total_allowance;
+	   grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+total_allowance;
 		cout << "\n\n\t\t\t\t\t---------------------------------";
 		cout << "\n\n\t\t\t\t\tTOTAL (GROSS PAY): " << grosspay;
 
@@ -1212,7 +1210,7 @@ int main ()
 
 
             //GROSSPAY
-            grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+restpay+total_allowance;
+            grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+total_allowance;
             cout << "\n\n\t\t\t\t\t---------------------------------";
             cout << "\n\n\t\t\t\t\tTOTAL (GROSS PAY): " << grosspay;
 
@@ -2090,7 +2088,7 @@ int main ()
 
 
             //GROSSPAY
-            grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+restpay+total_allowance;
+            grosspay = (basicpay-absentamount)-(lateutamount)+(otamount+holpay)+total_allowance;
             cout << "\n\n\t\t\t\t\t---------------------------------";
             cout << "\n\n\t\t\t\t\tTOTAL (GROSS PAY): " << grosspay;
 
@@ -2651,6 +2649,7 @@ int main ()
    cout << "\n\t\t\t\t\tPhil Health :                                 "<< phealth;
    cout << "\n\t\t\t\t\tPag-ibig :                                    "<< pagibig;
    cout << "\n\t\t\t\t\tTaxable Income :                              "<< taxinc;
+   cout << "\n\t\t\t\t\tTaxable Withheld :                            "<< taxwith;
    cout << "\n\t\t\t\t\tLoan :                                        "<< total_loan ;
    cout<<"\n\t\t\t\t\t---------------------------------------------------------------\n";
    cout << "\n\t\t\t\t\tNet Pay :                                     "<< netpay<<endl;
