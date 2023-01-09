@@ -8,7 +8,6 @@
 #include <cmath>
 
 /*
-pang10000times
  --------------------------------------------
 | Copyright @2023                            |
 | Created by: PLM BSIT 1-1                   |
