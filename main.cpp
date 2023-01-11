@@ -15,7 +15,7 @@
 | Yuri Alfrance Egipto  Kristhia Lastra      |
 | Rizza Mae Pardales    Alessandra San Jose  |
 | Ricky Cabe            Carl Lachica         |
-| Pocholo Balanac       Sharmaine Alauri    |
+| Pocholo Balanac       Sharmaine Alaurin    |
  --------------------------------------------
 */
 
@@ -739,33 +739,33 @@ int main ()
 
             switch (i)
             {
-                case 0 ... 10416:
+                case 0 ... 4807:
                 taxwith = 0;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
 
-                case 10417 ... 16666:
-                taxwith = ((taxinc - 10417)*(0.20)) + 0;
+                case 4808 ... 7691:
+                taxwith = ((taxinc - 4808)*(0.20)) + 0;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
 
-                case 16667 ... 33332:
-                taxwith = ((taxinc - 16667)*(0.25)) + 1250;
+                case 7692 ... 15384:
+                taxwith = ((taxinc - 7692)*(0.25)) + 576.92;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
 
-                case 33333 ... 83332:
-                taxwith = ((taxinc - 33333)*(0.30)) + 5416.67;
+                case 15385 ... 38461:
+                taxwith = ((taxinc - 15385)*(0.30)) + 2500.00;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
 
-                case 83333 ... 333332:
-                taxwith = ((taxinc - 83333)*(0.32)) + 20416.67;
+                case 38462 ... 153845:
+                taxwith = ((taxinc - 38462)*(0.32)) + 9423.08;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
 
-                case 333333 ... INT_MAX:
-                taxwith = ((taxinc - 333333)*(0.35)) + 100416.67;
+                case 153846 ... INT_MAX:
+                taxwith = ((taxinc - 153846)*(0.35)) + 46346.15;
                 cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
                 break;
             }
@@ -1604,35 +1604,35 @@ int main ()
 
                 switch (i)
                 {
-                    case 0 ... 10416:
-                    taxwith = 0;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                   case 0 ... 10416:
+                taxwith = 0;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 10417 ... 16666:
-                    taxwith = ((taxinc - 10417)*(0.20)) + 0;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 10417 ... 16666:
+                taxwith = ((taxinc - 10417)*(0.15)) + 0;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 16667 ... 33332:
-                    taxwith = ((taxinc - 16667)*(0.25)) + 1250;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 16667 ... 33332:
+                taxwith = ((taxinc - 16667)*(0.20)) + 937.50;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 33333 ... 83332:
-                    taxwith = ((taxinc - 33333)*(0.30)) + 5416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 33333 ... 83332:
+                taxwith = ((taxinc - 33333)*(0.25)) + 4270.70;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 83333 ... 333332:
-                    taxwith = ((taxinc - 83333)*(0.32)) + 20416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 83333 ... 333332:
+                taxwith = ((taxinc - 83333)*(0.30)) + 16770.70;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 333333 ... INT_MAX:
-                    taxwith = ((taxinc - 333333)*(0.35)) + 100416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 333333 ... INT_MAX:
+                taxwith = ((taxinc - 333333)*(0.35)) + 91770.70;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
                 }
                 //END TAX
 
@@ -2426,35 +2426,35 @@ int main ()
 
                 switch (i)
                 {
-                    case 0 ... 10416:
-                    taxwith = 0;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                    case 0 ... 20832:
+                taxwith = 0;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 10417 ... 16666:
-                    taxwith = ((taxinc - 10417)*(0.20)) + 0;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 20833 ... 33332:
+                taxwith = ((taxinc - 20833)*(0.20)) + 0;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 16667 ... 33332:
-                    taxwith = ((taxinc - 16667)*(0.25)) + 1250;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 33333 ... 66666:
+                taxwith = ((taxinc - 33333)*(0.25)) + 2500.00;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 33333 ... 83332:
-                    taxwith = ((taxinc - 33333)*(0.30)) + 5416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 66667 ... 166666:
+                taxwith = ((taxinc - 66667)*(0.30)) + 10833.33;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 83333 ... 333332:
-                    taxwith = ((taxinc - 83333)*(0.32)) + 20416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 166667 ... 666666:
+                taxwith = ((taxinc - 166667)*(0.32)) + 40833.33;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
 
-                    case 333333 ... INT_MAX:
-                    taxwith = ((taxinc - 333333)*(0.35)) + 100416.67;
-                    cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
-                    break;
+                case 666667 ... INT_MAX:
+                taxwith = ((taxinc - 666667)*(0.35)) + 200833.33;
+                cout << "\n\n\t\t\t\t\tTAX WITHHELD: " << taxwith;
+                break;
                 }
                 //END TAX
 
