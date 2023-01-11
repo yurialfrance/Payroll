@@ -15,7 +15,7 @@
 | Yuri Alfrance Egipto  Kristhia Lastra      |
 | Rizza Mae Pardales    Alessandra San Jose  |
 | Ricky Cabe            Carl Lachica         |
-| Pocholo Balanac       Sharmaine Alaurin    |
+| Pocholo Balanac       Sharmaine Alauri    |
  --------------------------------------------
 */
 
